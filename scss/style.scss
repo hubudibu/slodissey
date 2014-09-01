@@ -31,7 +31,8 @@ body {
 .hillcnt {
   width: 540px;
   max-width: 98%;
-  margin: 60px auto 0;
+  margin: 0 auto;
+  padding-top: 60px;
 }
 .abt {
   background: url(../img/bennyandthegirls.png) no-repeat center bottom;
@@ -168,4 +169,22 @@ button {
     right: 0;
     height: 360px;
     background: url(../img/bennywarning.png) no-repeat bottom center;
+}
+
+
+.banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(30px,110px) rotate(45deg);
+  font-family: 'Lucida Grande', sans-serif;
+  background: lighten(black,10%);
+  padding: 7px 40px;
+  transform-origin: top right;
+  font-size: 12px;
+  margin: 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 0 1px lighten(black,10%), 0 0 10px rgba(0,0,0,0.5);
+  border: 1px dotted lighten(black,40%);
+  color: white;
 }
