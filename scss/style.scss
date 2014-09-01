@@ -96,6 +96,9 @@ button {
 
 .share {
   margin: 80px auto 20px;
+  .fb_iframe_widget {
+    vertical-align: top;
+  }
 }
 
 #sharecnt {

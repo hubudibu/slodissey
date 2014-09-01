@@ -15,6 +15,14 @@
 </head>
 
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=164525580300331&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="hillcnt">
 
@@ -33,14 +41,16 @@
     <video src="" id="vid" loop="true" muted="true"></video>
   </div>
 
-  <p class="share">
-<!--    <a href="https://twitter.com/share" class="twitter-share-button" data-text="add some Benny Hill to your hyperlapses" data-via="hubudibu" data-count="none" data-hashtags="bennyhiper">Tweet</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>-->
-
+  <div class="share">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-text="add some Benny Hill to your hyperlapses" data-via="kibu" data-count="none" data-hashtags="bennyhiper">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+    </div>
+<!-- 
     <span>Here's your URL to share this vid: </span>
-    <span id="sharecnt">http://s.codepen.io/hubudibu/full/kqjHx</span>
+    <span id="sharecnt">http://s.codepen.io/hubudibu/full/kqjHx</span> -->
 
-    <p class="abt">hello we're <a href="https://twitter.com/hubudibu">@hubudibu</a> <a href="https://twitter.com/lazlozoid">@lazlozoid</a>  <a href="https://twitter.com/kibu">@kibu</a></p>
+    <p class="abt">hello, we're <a href="https://twitter.com/hubudibu">@hubudibu</a> <a href="https://twitter.com/lazlozoid">@lazlozoid</a>  <a href="https://twitter.com/kibu">@kibu</a></p>
 </div>
 
 <a href="http://codepen.io/hubudibu/pen/kqjHx" class="banner">fork me on codepen</a>
