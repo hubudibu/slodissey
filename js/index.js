@@ -39,13 +39,17 @@ var getVidFromID = function (id) {
         dataType: "jsonp",
         url:  'https://api.instagram.com/v1/media/'+id+'?client_id='+CLIENTID
       }).done(function(data2){
-          if (data2.data.videos.low_resolution) {
-             
-           updateShareURL(id); startVid(data2.data.videos.low_resolution.url);
+          if (data2.data && data2.data.videos && data2.data.videos.low_resolution) {
+            updateShareURL(id);
+            startVid(data2.data.videos.low_resolution.url);
+            unError();
           } else {
             vidcnt.removeClass('on');
+            errorMsg();
           }
-       });
+       }).fail(function(){
+          errorMsg();
+        });
 };
 
 var startVid = function (src) {
@@ -60,6 +64,16 @@ var startVid = function (src) {
 var updateShareURL = function (id) {
   // share.textContent = URL + id;
   window.location.href = '#'+id;
+};
+
+var error = document.getElementById('error');
+var errorMsg = function (msg) {
+  error.textContent = msg;
+  error.classList.add('on');
+  vid.attr('src', '');
+};
+var unError = function () {
+  error.classList.remove('on');
 };
 
 // share.addEventListener('mouseup',function(){
