@@ -1,0 +1,192 @@
+@import url(http://fonts.googleapis.com/css?family=Cherry+Cream+Soda);
+/* line 5, ../scss/style.scss */
+body, input, button {
+  font-family: 'Cherry Cream Soda', sans-serif;
+  color: white;
+  font-size: 20px;
+  outline: none;
+}
+
+/* line 12, ../scss/style.scss */
+a {
+  color: #99afef;
+  text-decoration: none;
+}
+
+/* line 17, ../scss/style.scss */
+html, body {
+  min-height: 100%;
+}
+
+/* line 21, ../scss/style.scss */
+body {
+  background-color: #fc6aa1;
+  background-image: linear-gradient(to bottom right, #f949b6 0%, #ff8b8b 100%);
+  text-align: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-perspective: 1000;
+  -webkit-perspective-origin: center top;
+}
+
+/* line 31, ../scss/style.scss */
+.hillcnt {
+  width: 540px;
+  max-width: 98%;
+  margin: 60px auto 0;
+}
+
+/* line 36, ../scss/style.scss */
+.abt {
+  background: url(../img/bennyandthegirls.png) no-repeat center bottom;
+  padding: 350px 0 5px;
+  margin: 0;
+  font-size: .5em;
+}
+
+/* line 43, ../scss/style.scss */
+h1 {
+  font-size: 4em;
+  margin-bottom: 60px;
+  text-shadow: 0 0 10px royalblue;
+}
+
+/* line 49, ../scss/style.scss */
+input {
+  padding: 10px;
+  border: none;
+  background: rgba(65, 105, 225, 0.9);
+  margin: 0;
+  outline: none;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* line 60, ../scss/style.scss */
+.or {
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 40px 0 35px;
+}
+/* line 64, ../scss/style.scss */
+.or:before, .or:after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin: 0 20px 0 -200%;
+  border-bottom: 2px solid;
+  vertical-align: middle;
+}
+/* line 73, ../scss/style.scss */
+.or:after {
+  margin: 0 -200% 0 20px;
+}
+
+/* line 78, ../scss/style.scss */
+button {
+  margin-bottom: 40px;
+  border: 2px solid royalblue;
+  background: transparent;
+  padding: 10px 60px;
+  cursor: pointer;
+}
+
+/* line 86, ../scss/style.scss */
+::input-placeholder {
+  color: white;
+}
+
+/* line 89, ../scss/style.scss */
+::-webkit-input-placeholder {
+  color: white;
+}
+
+/* line 92, ../scss/style.scss */
+::-moz-input-placeholder {
+  color: white;
+}
+
+/* line 96, ../scss/style.scss */
+.share {
+  margin: 80px auto 20px;
+}
+
+/* line 100, ../scss/style.scss */
+#sharecnt {
+  display: block;
+  white-space: nowrap;
+  overflow: auto;
+  line-height: 1.5;
+  font-size: .8em;
+}
+
+/* line 108, ../scss/style.scss */
+.vidcnt {
+  background: peachpuff;
+  background-image: linear-gradient(to bottom, #ffdab9, #ffcda0);
+  padding: 20px;
+  border: 10px solid sienna;
+  border-top-color: #944c2a;
+  border-bottom-color: #944c2a;
+  position: relative;
+  transform: rotatex(3deg) scale(1.03, 1);
+  box-shadow: -110px 280px 0px -260px #502917, 110px 280px 0px -260px #502917;
+}
+/* line 118, ../scss/style.scss */
+.vidcnt video {
+  display: block;
+  width: 480px;
+  height: 480px;
+  border-radius: 80% / 10%;
+  position: relative;
+  z-index: 30;
+}
+/* line 126, ../scss/style.scss */
+.vidcnt:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  border-style: solid;
+  border-width: 50px 20px;
+  border-color: rgba(255, 178, 109, 0.5) transparent rgba(255, 245, 236, 0.5);
+}
+/* line 140, ../scss/style.scss */
+.vidcnt .ants, .vidcnt:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  border-radius: 80% / 10%;
+  margin: 20px;
+  box-shadow: inset 0 2px 2px sienna, inset 0 -1px 2px rgba(255, 255, 255, 0.7);
+}
+/* line 153, ../scss/style.scss */
+.vidcnt .ants {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/82667/tv_noise.gif);
+  box-shadow: none;
+  z-index: 20;
+  overflow: hidden;
+}
+
+/* line 162, ../scss/style.scss */
+#error.on:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 360px;
+  background: url(../img/bennywarning.png) no-repeat bottom center;
+}

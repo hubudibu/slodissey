@@ -1,0 +1,171 @@
+@import "compass/css3";
+
+@import url(http://fonts.googleapis.com/css?family=Cherry+Cream+Soda);
+
+body, input, button {
+  font-family: 'Cherry Cream Soda', sans-serif;
+  color: white;
+  font-size: 20px;
+  outline: none;
+}
+
+a {
+  color: lighten(royalblue,20%);
+  text-decoration: none;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background-color: #fc6aa1;
+  background-image: linear-gradient(to bottom right, rgb(249, 73, 182) 0%, rgb(255, 139, 139) 100%);
+  text-align: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-perspective: 1000;
+  -webkit-perspective-origin: center top;
+}
+
+.hillcnt {
+  width: 540px;
+  max-width: 98%;
+  margin: 60px auto 0;
+}
+.abt {
+  background: url(../img/bennyandthegirls.png) no-repeat center bottom;
+  padding: 350px 0 5px; 
+  margin: 0;
+  font-size: .5em;
+}
+
+h1 {
+  font-size: 4em;
+  margin-bottom: 60px;
+  text-shadow: 0 0 10px royalblue;
+}
+
+input {
+  padding: 10px;
+  border: none;
+  background: fade-out(royalblue,0.1);
+  margin: 0;
+  outline: none;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.or {
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 40px 0 35px;
+  &:before, &:after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: 0 20px 0 -200%;
+    border-bottom: 2px solid;
+    vertical-align: middle;
+  }
+  &:after {
+    margin: 0 -200% 0 20px;
+  }
+}
+
+button {
+  margin-bottom: 40px;
+  border: 2px solid royalblue;
+  background: transparent;
+  padding: 10px 60px;
+  cursor: pointer;
+}
+
+::input-placeholder {
+  color: white;
+}
+::-webkit-input-placeholder {
+  color: white;
+}
+::-moz-input-placeholder {
+  color: white;
+}
+
+.share {
+  margin: 80px auto 20px;
+}
+
+#sharecnt {
+  display: block;
+  white-space: nowrap;
+  overflow: auto;
+  line-height: 1.5;
+  font-size: .8em;
+}
+
+.vidcnt {
+  background: peachpuff;
+  background-image: linear-gradient(to bottom, peachpuff, darken(peachpuff,5%));
+  padding: 20px;
+  border: 10px solid sienna;
+  border-top-color: darken(sienna,3%);
+  border-bottom-color: darken(sienna,3%);
+  position: relative;
+  transform: rotatex(3deg) scale(1.03, 1);
+  box-shadow: -110px 280px 0px -260px darken(sienna,20%), 110px 280px 0px -260px darken(sienna,20%);
+  video {
+    display: block;
+    width: 480px;
+    height: 480px;
+    border-radius: 80% / 10%;
+    position: relative;
+    z-index: 30;
+  }
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    border-style: solid;
+    border-width: 50px 20px;
+    border-color:  fade-out(darken(peachpuff,15%),0.5) transparent fade-out(lighten(peachpuff,10%),0.5);
+  }
+  .ants,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    border-radius: 80% / 10%;
+    margin: 20px;
+    box-shadow: inset 0 2px 2px sienna, inset 0 -1px 2px fade-out(white,0.3);
+  }
+  .ants {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/82667/tv_noise.gif);
+   box-shadow: none;
+    z-index: 20;
+    overflow: hidden;
+  }
+}
+
+
+#error.on:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 360px;
+    background: url(../img/bennywarning.png) no-repeat bottom center;
+}
