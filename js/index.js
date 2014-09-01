@@ -47,9 +47,7 @@ var getVidFromID = function (id) {
             vidcnt.removeClass('on');
             errorMsg();
           }
-       }).fail(function(){
-          errorMsg();
-        });
+       });
 };
 
 var startVid = function (src) {
