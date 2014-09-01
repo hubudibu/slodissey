@@ -16,9 +16,10 @@ random.addEventListener('mouseup',function(){
     dataType: "jsonp",
     url:  'https://api.instagram.com/v1/tags/hyperlapse/media/recent?client_id='+CLIENTID
   }).done(function(data){
-    var vid = data.data.filter(function(img){return img.type==='video';})[0];
-   
-           updateShareURL(vid.id); startVid(vid.videos.low_resolution.url);
+    var vids = data.data.filter(function(img){return img.type==='video';});
+    var vid = vids[Math.floor(Math.random()*vids.length)];
+    updateShareURL(vid.id);
+    startVid(vid.videos.low_resolution.url);
   });
 });
 
