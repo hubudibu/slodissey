@@ -1,24 +1,16 @@
-@import url(http://fonts.googleapis.com/css?family=Cherry+Cream+Soda);
-/* line 5, ../scss/style.scss */
 body, input, button {
-  font-family: 'Cherry Cream Soda', sans-serif;
+  font-family: 'Dosis', sans-serif;
   color: white;
   font-size: 20px;
-  outline: none;
-}
+  outline: none; }
 
-/* line 12, ../scss/style.scss */
 a {
   color: #99afef;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
-/* line 17, ../scss/style.scss */
 html, body {
-  min-height: 100%;
-}
+  min-height: 100%; }
 
-/* line 21, ../scss/style.scss */
 body {
   background-color: #fc6aa1;
   background-image: linear-gradient(to bottom right, #f949b6 0%, #ff8b8b 100%);
@@ -26,33 +18,25 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   -webkit-perspective: 1000;
-  -webkit-perspective-origin: center top;
-}
+  -webkit-perspective-origin: center top; }
 
-/* line 31, ../scss/style.scss */
 .hillcnt {
   width: 540px;
   max-width: 98%;
   margin: 0 auto;
-  padding-top: 60px;
-}
+  padding-top: 60px; }
 
-/* line 37, ../scss/style.scss */
 .abt {
   background: url(../img/bennyandthegirls.png) no-repeat center bottom;
   padding: 350px 0 5px;
   margin: 0;
-  font-size: .5em;
-}
+  font-size: .5em; }
 
-/* line 44, ../scss/style.scss */
 h1 {
   font-size: 4em;
   margin-bottom: 60px;
-  text-shadow: 0 0 10px royalblue;
-}
+  text-shadow: 0 0 10px royalblue; }
 
-/* line 50, ../scss/style.scss */
 input {
   padding: 10px;
   border: none;
@@ -61,130 +45,98 @@ input {
   outline: none;
   display: block;
   width: 100%;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
-/* line 61, ../scss/style.scss */
 .or {
   white-space: nowrap;
   overflow: hidden;
-  margin: 40px 0 35px;
-}
-/* line 65, ../scss/style.scss */
-.or:before, .or:after {
-  content: '';
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  margin: 0 20px 0 -200%;
-  border-bottom: 2px solid;
-  vertical-align: middle;
-}
-/* line 74, ../scss/style.scss */
-.or:after {
-  margin: 0 -200% 0 20px;
-}
+  margin: 40px 0 35px; }
+  .or:before, .or:after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: 0 20px 0 -200%;
+    border-bottom: 2px solid;
+    vertical-align: middle; }
+  .or:after {
+    margin: 0 -200% 0 20px; }
 
-/* line 79, ../scss/style.scss */
 button {
   margin-bottom: 40px;
   border: 2px solid royalblue;
   background: transparent;
   padding: 10px 60px;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
-/* line 87, ../scss/style.scss */
 ::input-placeholder {
-  color: white;
-}
+  color: white; }
 
-/* line 90, ../scss/style.scss */
 ::-webkit-input-placeholder {
-  color: white;
-}
+  color: white; }
 
-/* line 93, ../scss/style.scss */
 ::-moz-input-placeholder {
-  color: white;
-}
+  color: white; }
 
-/* line 97, ../scss/style.scss */
 .share {
-  margin: 80px auto 20px;
-}
-/* line 99, ../scss/style.scss */
-.share .fb_iframe_widget {
-  vertical-align: top;
-}
+  margin: 80px auto 20px; }
+  .share .fb_iframe_widget {
+    vertical-align: top; }
 
-/* line 104, ../scss/style.scss */
 #sharecnt {
   display: block;
   white-space: nowrap;
   overflow: auto;
   line-height: 1.5;
-  font-size: .8em;
-}
+  font-size: .8em; }
 
-/* line 112, ../scss/style.scss */
 .vidcnt {
   background: peachpuff;
-  background-image: linear-gradient(to bottom, #ffdab9, #ffcda0);
+  background-image: linear-gradient(to bottom, peachpuff, #ffcda0);
   padding: 20px;
   border: 10px solid sienna;
   border-top-color: #944c2a;
   border-bottom-color: #944c2a;
   position: relative;
   transform: rotatex(3deg) scale(1.03, 1);
-  box-shadow: -110px 280px 0px -260px #502917, 110px 280px 0px -260px #502917;
-}
-/* line 122, ../scss/style.scss */
-.vidcnt video {
-  display: block;
-  width: 480px;
-  height: 480px;
-  border-radius: 80% / 10%;
-  position: relative;
-  z-index: 30;
-}
-/* line 130, ../scss/style.scss */
-.vidcnt:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  border-style: solid;
-  border-width: 50px 20px;
-  border-color: rgba(255, 178, 109, 0.5) transparent rgba(255, 245, 236, 0.5);
-}
-/* line 144, ../scss/style.scss */
-.vidcnt .ants, .vidcnt:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
-  border-radius: 80% / 10%;
-  margin: 20px;
-  box-shadow: inset 0 2px 2px sienna, inset 0 -1px 2px rgba(255, 255, 255, 0.7);
-}
-/* line 157, ../scss/style.scss */
-.vidcnt .ants {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/82667/tv_noise.gif);
-  box-shadow: none;
-  z-index: 20;
-  overflow: hidden;
-}
+  box-shadow: -110px 280px 0px -260px #502917, 110px 280px 0px -260px #502917; }
+  .vidcnt video {
+    display: block;
+    width: 480px;
+    height: 480px;
+    border-radius: 80% / 10%;
+    position: relative;
+    z-index: 30; }
+  .vidcnt:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    border-style: solid;
+    border-width: 50px 20px;
+    border-color: rgba(255, 178, 109, 0.5) transparent rgba(255, 245, 236, 0.5); }
+  .vidcnt .ants, .vidcnt:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    border-radius: 80% / 10%;
+    margin: 20px;
+    box-shadow: inset 0 2px 2px sienna, inset 0 -1px 2px rgba(255, 255, 255, 0.7); }
+  .vidcnt .ants {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/82667/tv_noise.gif);
+    box-shadow: none;
+    z-index: 20;
+    overflow: hidden; }
 
-/* line 166, ../scss/style.scss */
 #error.on:after {
   content: '';
   display: block;
@@ -193,10 +145,8 @@ button {
   left: 0;
   right: 0;
   height: 360px;
-  background: url(../img/bennywarning.png) no-repeat bottom center;
-}
+  background: url(../img/bennywarning.png) no-repeat bottom center; }
 
-/* line 178, ../scss/style.scss */
 .banner {
   position: absolute;
   top: 0;
@@ -211,5 +161,6 @@ button {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 0 1px #1a1a1a, 0 0 10px rgba(0, 0, 0, 0.5);
   border: 1px dotted #666666;
-  color: white;
-}
+  color: white; }
+
+/*# sourceMappingURL=style.css.map */

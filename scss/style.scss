@@ -1,9 +1,5 @@
-@import "compass/css3";
-
-@import url(http://fonts.googleapis.com/css?family=Cherry+Cream+Soda);
-
 body, input, button {
-  font-family: 'Cherry Cream Soda', sans-serif;
+  font-family: 'Dosis', sans-serif;
   color: white;
   font-size: 20px;
   outline: none;
@@ -36,7 +32,7 @@ body {
 }
 .abt {
   background: url(../img/bennyandthegirls.png) no-repeat center bottom;
-  padding: 350px 0 5px; 
+  padding: 350px 0 5px;
   margin: 0;
   font-size: .5em;
 }
