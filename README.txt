@@ -1,3 +1,2 @@
-A Pen created at CodePen.io. You can find this one at http://codepen.io/hubudibu/pen/kqjHx.
-
- I know what your #hyperlapse videos need.
+I know what your #slowmotion videos need too.
+Fork of [hubudibu/bennyhiper](https://github.com/hubudibu/bennyhiper)
