@@ -1,8 +1,21 @@
+$brown: #3d2c2b;
+$beige: #f8e4c1;
+$red: #bb3a48;
+
+@mixin smallscreen {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
 body, input, button {
-  font-family: 'Dosis', sans-serif;
-  color: white;
-  font-size: 20px;
+  font-family: 'Titillium Web', sans-serif;
+  color: $beige;
   outline: none;
+  font-size: 22px;
+  @include smallscreen {
+      font-size: 18px;
+  }
 }
 
 a {
@@ -15,79 +28,168 @@ html, body {
 }
 
 body {
-  background-color: #fc6aa1;
-  background-image: linear-gradient(to bottom right, rgb(249, 73, 182) 0%, rgb(255, 139, 139) 100%);
   text-align: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  -webkit-perspective: 1000;
-  -webkit-perspective-origin: center top;
+  background: $brown url(../img/slodissey-bg.jpg) no-repeat center top;
+  @include smallscreen {
+      background-image: url(../img/slodissey-bg-small.jpg);
+  }
 }
 
-.hillcnt {
-  width: 540px;
+.cnt {
+  width: 470px;
   max-width: 98%;
   margin: 0 auto;
-  padding-top: 60px;
-}
-.abt {
-  background: url(../img/bennyandthegirls.png) no-repeat center bottom;
-  padding: 350px 0 5px;
-  margin: 0;
-  font-size: .5em;
+  padding: 135px 0 40px;
 }
 
 h1 {
-  font-size: 4em;
-  margin-bottom: 60px;
-  text-shadow: 0 0 10px royalblue;
+  font-size: 64px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  font-weight: 200;
+  text-transform: uppercase;
+  position: relative;
+  small {
+      font-size: 12px;
+      vertical-align: 36px;
+      margin: 0 -60px 0 -4px;
+  }
+  &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto auto 0;
+      width: 270px;
+      height: 0;
+      border-bottom: 2px solid $beige;
+  }
 }
 
+.logo {
+    background: url(../img/kibulogo.png) no-repeat 0 0;
+    width: 205px;
+    height: 40px;
+    overflow: hidden;
+    text-indent: 110%;
+    text-align: left;
+    white-space: nowrap;
+    margin: 0 auto;
+}
+
+.vidcnt {
+  background: $brown;
+  border: 2px solid $brown;
+  box-shadow: 0 0 0 3px $beige, 0 0 0 6px $brown, 0 0 0 15px $beige;
+
+  border-radius: 3px;
+  margin: 555px 15px 30px;
+  position: relative;
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    border-radius: 2px;
+    z-index: 30;
+  }
+  &:before {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+  }
+}
+
+
+#error.on:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 360px;
+    background: url(../img/bennywarning.png) no-repeat bottom center;
+}
+
+
+
 input {
-  padding: 10px;
-  border: none;
-  background: fade-out(royalblue,0.1);
+  padding: 4px 15px;
+  border: 1px solid $beige;
+  background: $brown;
   margin: 0;
   outline: none;
   display: block;
   width: 100%;
   box-sizing: border-box;
-}
-
-.or {
-  white-space: nowrap;
-  overflow: hidden;
-  margin: 40px 0 35px;
-  &:before, &:after {
-    content: '';
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    margin: 0 20px 0 -200%;
-    border-bottom: 2px solid;
-    vertical-align: middle;
-  }
-  &:after {
-    margin: 0 -200% 0 20px;
-  }
+  border-radius: 17px;
+  text-align: center;
 }
 
 button {
-  margin-bottom: 40px;
-  border: 2px solid royalblue;
+  margin: 10px 0;
+  padding: 0;
+  width: 281px;
+  max-width: 98%;
+  height: 125px;
+  overflow: hidden;
   background: transparent;
-  padding: 10px 60px;
+  border: none;
   cursor: pointer;
+  position: relative;
+  span {
+      display: block;
+      max-width: 100%;
+      transition: background-position .2s;
+      &:focus,
+      &:hover {
+            transition: background-position .1s;
+          background-position: 50% 3px;
+      }
+      &:active {
+          background-position: 50% 6px;
+      }
+  }
+  .up {
+      background: url(../img/randomup.png) no-repeat 50% 0;
+      width: 181px;
+      height: 66px;
+      margin: 0 auto;
+  }
+  .dn {
+      background: url(../img/randown.png) no-repeat 50% 0;
+      width: 281px;
+      height: 87px;
+      margin: -20px auto 0;
+  }
+  &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 5px;
+      right: 5px;
+      margin: auto 0 0;
+      border-bottom: 2px solid $beige;
+  }
 }
 
 ::input-placeholder {
-  color: white;
+  color: $beige;
 }
 ::-webkit-input-placeholder {
-  color: white;
+  color: $beige;
 }
 ::-moz-input-placeholder {
-  color: white;
+  color: $beige;
+}
+
+.label {
+    text-transform: uppercase;
+    color: $red;
+    font-size: (24/22)em;
 }
 
 .share {
@@ -103,71 +205,6 @@ button {
   overflow: auto;
   line-height: 1.5;
   font-size: .8em;
-}
-
-.vidcnt {
-  background: peachpuff;
-  background-image: linear-gradient(to bottom, peachpuff, darken(peachpuff,5%));
-  padding: 20px;
-  border: 10px solid sienna;
-  border-top-color: darken(sienna,3%);
-  border-bottom-color: darken(sienna,3%);
-  position: relative;
-  transform: rotatex(3deg) scale(1.03, 1);
-  box-shadow: -110px 280px 0px -260px darken(sienna,20%), 110px 280px 0px -260px darken(sienna,20%);
-  video {
-    display: block;
-    width: 480px;
-    height: 480px;
-    border-radius: 80% / 10%;
-    position: relative;
-    z-index: 30;
-  }
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    border-style: solid;
-    border-width: 50px 20px;
-    border-color:  fade-out(darken(peachpuff,15%),0.5) transparent fade-out(lighten(peachpuff,10%),0.5);
-  }
-  .ants,
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 50;
-    border-radius: 80% / 10%;
-    margin: 20px;
-    box-shadow: inset 0 2px 2px sienna, inset 0 -1px 2px fade-out(white,0.3);
-  }
-  .ants {
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/82667/tv_noise.gif);
-   box-shadow: none;
-    z-index: 20;
-    overflow: hidden;
-  }
-}
-
-
-#error.on:after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 360px;
-    background: url(../img/bennywarning.png) no-repeat bottom center;
 }
 
 
