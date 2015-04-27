@@ -94,6 +94,8 @@ h1 {
     width: 100%;
     border-radius: 2px;
     z-index: 30;
+    background: url(../img/hal.png) no-repeat 50% 50%;
+    background-size: contain;
   }
   &:before {
       content: '';
