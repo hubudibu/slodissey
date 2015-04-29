@@ -187,6 +187,15 @@ button {
 ::-moz-input-placeholder {
   color: $beige;
 }
+input:focus::input-placeholder {
+  color: fade-out($beige,.9);
+}
+input:focus::-webkit-input-placeholder {
+  color: fade-out($beige,.9);
+}
+input:focus::-moz-input-placeholder {
+  color: fade-out($beige,.9);
+}
 
 .label {
     text-transform: uppercase;
