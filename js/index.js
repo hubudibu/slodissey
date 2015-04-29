@@ -1,6 +1,7 @@
 (function () {
 
 var TAG = 'slowmotion';
+var RNDCOUNT = 100;
 
 var input = document.getElementById('input');
 var random = document.getElementById('random');
@@ -15,7 +16,7 @@ var CLIENTID = '0395f25a0fd1442cbba6458d7f021217';
 var getRandomVid = function () {
   $.ajax({
     dataType: "jsonp",
-    url:  'https://api.instagram.com/v1/tags/' + TAG + '/media/recent?client_id='+CLIENTID
+    url:  'https://api.instagram.com/v1/tags/' + TAG + '/media/recent?count=' + RNDCOUNT + '&client_id='+CLIENTID
   }).done(function(data){
     var vids = data.data.filter(function(img){return img.type==='video';});
     var vid = vids[Math.floor(Math.random()*vids.length)];
