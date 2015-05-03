@@ -67,6 +67,63 @@ h1 {
   }
 }
 
+
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+	40% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+	60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+	40% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+	60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+
+h2 {
+  margin-top: 155px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: $beige transparent transparent;
+    border-width: 18px 18px 0;
+    margin: 25px 0 0 -18px;
+
+    -webkit-animation: bounce 2s infinite;
+
+            animation: bounce 2s infinite;
+  }
+}
+
+
 .logo {
     background: url(../img/kibulogo.png) no-repeat 0 0;
     width: 205px;
@@ -84,7 +141,7 @@ h1 {
   box-shadow: 0 0 0 3px $beige, 0 0 0 6px $brown, 0 0 0 15px $beige;
 
   border-radius: 3px;
-  margin: 555px 15px 30px;
+  margin: 317px 15px 30px;
   position: relative;
   video {
     position: absolute;
@@ -145,10 +202,12 @@ button {
   span {
       display: block;
       max-width: 100%;
-      transition: background-position .2s;
+      -webkit-transition: background-position .2s;
+              transition: background-position .2s;
       &:focus,
       &:hover {
-            transition: background-position .1s;
+            -webkit-transition: background-position .1s;
+                    transition: background-position .1s;
           background-position: 50% 3px;
       }
       &:active {
@@ -204,7 +263,8 @@ input:focus::-moz-input-placeholder {
 }
 
 .share {
-  margin: 80px auto 20px;
+  margin: 40px auto 20px;
+  height: 23px;
   .fb_iframe_widget {
     vertical-align: top;
   }
@@ -216,22 +276,4 @@ input:focus::-moz-input-placeholder {
   overflow: auto;
   line-height: 1.5;
   font-size: .8em;
-}
-
-
-.banner {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(30px,110px) rotate(45deg);
-  font-family: 'Lucida Grande', sans-serif;
-  background: lighten(black,10%);
-  padding: 7px 40px;
-  transform-origin: top right;
-  font-size: 12px;
-  margin: 0;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  box-shadow: 0 0 0 1px lighten(black,10%), 0 0 10px rgba(0,0,0,0.5);
-  border: 1px dotted lighten(black,40%);
-  color: white;
 }
