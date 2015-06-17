@@ -166,9 +166,14 @@ input:focus::-moz-input-placeholder {
   font-size: 1.09091 em; }
 
 .share {
-  margin: 80px auto 20px; }
+  margin: 20px auto 20px; }
   .share .fb_iframe_widget {
-    vertical-align: top; }
+    vertical-align: top;
+    margin: 0px; }
+
+.twitter-share-button {
+      margin: 1.5px -1.5px 0px 0px !important;
+      } 
 
 #sharecnt {
   display: block;
