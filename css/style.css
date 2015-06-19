@@ -64,7 +64,7 @@ h1 {
   border: 2px solid #3d2c2b;
   box-shadow: 0 0 0 3px #f8e4c1, 0 0 0 6px #3d2c2b, 0 0 0 15px #f8e4c1;
   border-radius: 3px;
-  margin: 555px 15px 30px;
+  margin: 270px 15px 30px;
   position: relative; }
   .vidcnt video {
     position: absolute;
@@ -114,22 +114,28 @@ button {
   border: none;
   cursor: pointer;
   position: relative; }
-  button span {
-    display: block;
-    max-width: 100%;
-    transition: background-position .2s; }
+    button span {
+      display: block;
+      max-width: 100%;
+      background-position: 0px 6px;
+      transition: all 0.5s ease-out 0s;      
+      }
     button span:focus, button span:hover {
-      transition: background-position .1s;
-      background-position: 50% 3px; }
+
+      background-position: 0px 3px;
+      transition: all 0.5s ease-out 0s;    
+    }
     button span:active {
-      background-position: 50% 6px; }
+       background-position: 0px 6px; 
+    }
+
   button .up {
-    background: url(../img/randomup.png) no-repeat 50% 0;
+    background: url(../img/randomup.png) no-repeat;
     width: 181px;
     height: 66px;
     margin: 0 auto; }
   button .dn {
-    background: url(../img/randown.png) no-repeat 50% 0;
+    background: url(../img/randown.png) no-repeat;
     width: 281px;
     height: 87px;
     margin: -20px auto 0; }
@@ -160,13 +166,65 @@ input:focus::-webkit-input-placeholder {
 input:focus::-moz-input-placeholder {
   color: rgba(248, 228, 193, 0.1); }
 
+.arrow {
+    background: url(../img/arrow-down.jpg) no-repeat;
+    width: 31px;
+    height: 16px;
+    margin: 268px auto;
+    animation:arrowscale .3s linear infinite alternate;
+    -moz-animation:arrowscale .3s linear infinite alternate; /* Firefox */
+    -webkit-animation:arrowscale .3s linear infinite alternate; /* Safari and Chrome */
+    -o-animation:arrowscale .3s linear infinite; /* Opera */  
+  }
+
+
+@keyframes arrowscale
+{
+  from {
+    transform:scale(1);
+  }
+  to {
+    transform:scale(1.4);
+  }
+}
+
+@-moz-keyframes arrowscale /* Firefox */
+{
+  from {
+    -moz-transform:scale(1);
+  }
+  to {
+    -moz-transform:scale(1.4);
+  }
+}
+
+@-webkit-keyframes arrowscale /* Safari and Chrome */
+{
+  from {
+    -webkit-transform:scale(1);
+  }
+  to {
+    -webkit-transform:scale(1.4);
+  }
+}
+
+@-o-keyframes arrowscale /* Opera */
+{
+  from {
+    -o-transform:scale(1);
+  }
+  to {
+    -o-transform:scale(1.4);
+  }
+}
+
 .label {
   text-transform: uppercase;
   color: #bb3a48;
   font-size: 1.09091 em; }
 
 .share {
-  margin: 20px auto 20px; }
+  margin: 50px auto 20px; }
   .share .fb_iframe_widget {
     vertical-align: top;
     margin: 0px; }

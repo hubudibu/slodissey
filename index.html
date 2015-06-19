@@ -55,14 +55,8 @@
         <h1>Slow Odyssey <small>2015</small></h1>
         <p class="logo">Kitchen Budapest</p>
 
-        <div class="share">
-          <a href="https://twitter.com/share" class="twitter-share-button" data-text="add some epicness to your slowmotion videos" data-via="kibu" data-count="none" data-hashtags="slowodyssey">Tweet</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-          <div class="fb-like" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
-        </div>
-
-        <h2>Scroll for epicness</h2>
-
+        <!--- h2>Scroll for epicness</h2 -->
+        <div class="arrow"></div>
         <div class="vidcnt">
         <span class="hal" id="error"></span>
         <video src="" id="vid" loop="true" muted="true" poster="img/hal.png"></video>
@@ -73,6 +67,12 @@
         <button id="random"><span class="up"></span><span class="dn"></span></button>
         <p class="label">random #slowmotion trip</p>
 
+        <div class="share">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-text="add some epicness to your slowmotion videos" data-via="kibu" data-count="none" data-hashtags="slowodyssey">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          <div class="fb-like" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+        </div>
+
     </div>
 
 
@@ -81,6 +81,16 @@
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="js/index.js"></script>
+
+<script>
+/*$("div .arrow").ready(function() {
+    var duration = 1400;
+    $msg = $(this);
+    //syntax is: animation-name animation-duration[ animation-timing-function][ animation-delay][ animation-iteration-count][ animation-direction]
+    $msg.css("animation", "arrowscale " + duration + "ms ease infinite alternate");
+});*/
+</script>
+
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
