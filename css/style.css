@@ -59,6 +59,12 @@ h1 {
   white-space: nowrap;
   margin: 0 auto; }
 
+.process{
+  position: absolute;
+  margin: -60px -40px 0px;
+  z-index: 1;
+}
+
 .vidcnt {
   background: #3d2c2b;
   border: 2px solid #3d2c2b;

@@ -1,4 +1,5 @@
 (function () {
+setTimeout(function(){
 
 var TAG = 'slowmotion';
 var RNDCOUNT = 100;
@@ -88,5 +89,7 @@ if (window.location.hash) {
 } else {
   getRandomVid();
 }
+
+}, 4000);
 
 })();
