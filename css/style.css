@@ -118,12 +118,12 @@ button {
       display: block;
       max-width: 100%;
       background-position: 0px 6px;
-      transition: all 0.5s ease-out 0s;      
+      transition: all 0.3s ease-out 0s;      
       }
     button span:focus, button span:hover {
 
       background-position: 0px 3px;
-      transition: all 0.5s ease-out 0s;    
+      transition: all 0.3s ease-out 0s;    
     }
     button span:active {
        background-position: 0px 6px; 
