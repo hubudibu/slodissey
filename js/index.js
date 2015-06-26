@@ -17,12 +17,12 @@ var CLIENTID = '0395f25a0fd1442cbba6458d7f021217';
 var getRandomVid = function () {
   $.ajax({
     dataType: "jsonp",
-    url:  'https://api.instagram.com/v1/tags/' + TAG + '/media/recent?count=' + RNDCOUNT + '&client_id='+CLIENTID
-  }).done(function(data){
+    url:  'https://api.instagram.com/v1/tags/' + TAG + '/media/recent?count=' + RNDCOUNT + '&client_id='+CLIENTID    
+  }).done(function(data){    
     var vids = data.data.filter(function(img){return img.type==='video';});
     var vid = vids[Math.floor(Math.random()*vids.length)];
     updateShareURL(vid.id);
-    startVid(vid.videos.low_resolution.url);
+    startVid(vid.videos.low_resolution.url);    
   });
 };
 
@@ -82,6 +82,12 @@ input.addEventListener('keyup',function(){
 random.addEventListener('mouseup',function(){
   getRandomVid();
 });
+
+
+// var init = function () {
+//   setInterval(function(){ getRandomVid(); }, 15*1000);  // 15 seconds
+// };
+// init();
 
 
 if (window.location.hash) {
